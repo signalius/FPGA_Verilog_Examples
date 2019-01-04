@@ -17,7 +17,7 @@ sudo apt install libxext6:i386
 sudo apt install zlib1g:i386
 ```
 
-```cpp
+```bash
 sudo apt install libsm6:i386
 
 sudo apt install libxi6:i386
@@ -45,30 +45,31 @@ Then software can be installed
 ## Install license:
 License must be generated for eth0 device only.
 type command: 
-```
+```bash
 ip a
 ```
 to see all available interfaces.
-If eth0 not exist do this: 
-https://askubuntu.com/questions/767786/changing-network-interfaces-name-ubuntu-16-04
+If eth0 not exist do this:
 
-Edit your /etc/default/grub changing the line from
+[Change interface name](https://askubuntu.com/questions/767786/changing-network-interfaces-name-ubuntu-16-04)
 
-GRUB_CMDLINE_LINUX=""
+Edit your **/etc/default/grub** and change the line from
+
+**GRUB_CMDLINE_LINUX=""**
 
 to
 
-GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
+**GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"**
 
-and, finally run as root:
-```
+and then update grub as root:
+```bash
 sudo update-grub
 ```
 and reboot your system
 
 ## DIAMOND PROGRAMMER Permissions
 create file:
-```sh
+```bash
 sudo touch /etc/udev/rules.d/70-ftdi-for-user.rules 
 ```
 with content:
