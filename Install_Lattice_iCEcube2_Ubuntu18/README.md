@@ -67,14 +67,18 @@ sudo update-grub
 ```
 and reboot your system
 
-## DIAMOND PROGRAMMER Permissions
-create file:
+## DIAMOND PROGRAMMER 
+
+To run programmer as normal user we have to add permissions.
+First we need to create file:
 ```bash
 sudo touch /etc/udev/rules.d/70-ftdi-for-user.rules 
 ```
 with content:
 
 SUBSYSTEM=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6010", MODE="0666", OWNER="1000"
+
+Owner must be ID of user (can be checked using id command)
 
 and reload rules:
 ```sh
