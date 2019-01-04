@@ -7,8 +7,9 @@
 sudo apt install libxext6:i386
 sudo apt install zlib1g:i386
 
+Download:
 wget https://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1_i386.deb
-install it
+and install it
 
 sudo apt install libsm6:i386
 
@@ -56,9 +57,12 @@ sudo update-grub
 and reboot your system
 
 ## DIAMOND PROGRAMMER Permissions
-create file /etc/udev/rules.d/70-ftdi-for-user.rules with content:
-SUBSYSTEM=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6010", MODE="0666", OWNER="1000"
-sudo udevadm control --reload-rules
+create file:
+> sudo touch /etc/udev/rules.d/70-ftdi-for-user.rules 
+with content:
+> SUBSYSTEM=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6010", MODE="0666", OWNER="1000"
+and reload rules:
+> sudo udevadm control --reload-rules
 
 
 
