@@ -1,8 +1,8 @@
-Procedure to install iCEcube on Ubuntu 18.04
+# Procedure to install iCEcube on Ubuntu 18.04
 
-Ubuntu packages finder https://packages.ubuntu.com
+[Ubuntu packages finder](https://packages.ubuntu.com)
 
-*** Install dependencies to software
+## Install dependencies to software
 
 sudo apt install libxext6:i386
 sudo apt install zlib1g:i386
@@ -34,7 +34,7 @@ sudo apt install libstdc++6:i386
 
 Then software can be installed
 
-*** Install license:
+## Install license:
 License must be generated for eth0 device only.
 type command: ip a
 to see all available interfaces.
@@ -55,7 +55,7 @@ sudo update-grub
 
 and reboot your system
 
-*** DIAMOND PROGRAMMER Permissions
+## DIAMOND PROGRAMMER Permissions
 create file /etc/udev/rules.d/70-ftdi-for-user.rules with content:
 SUBSYSTEM=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6010", MODE="0666", OWNER="1000"
 sudo udevadm control --reload-rules
