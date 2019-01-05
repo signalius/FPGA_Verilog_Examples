@@ -36,7 +36,7 @@ sudo apt install libfreetype6:i386
 
 sudo apt install libfontconfig1:i386
 
-sudo apt install libglib-2.0-0:i386
+sudo apt install libglib2.0-0:i386
 
 sudo apt install libstdc++6:i386
 ```
