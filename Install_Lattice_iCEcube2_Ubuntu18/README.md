@@ -7,7 +7,7 @@
 
 Download and install libpng12:
 ```bash
-wget https://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1_i386.deb
+wget http://security.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1_i386.deb
 sudo dpkg -i libpng12*.deb
 ```
 
