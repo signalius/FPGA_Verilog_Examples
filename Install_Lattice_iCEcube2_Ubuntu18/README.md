@@ -43,12 +43,11 @@ sudo apt install libstdc++6:i386
 Then software can be installed
 
 ## Install license:
-License must be generated for eth0 device only.
-type command: 
+License must be generated for eth0 network card but ubuntu use now other names.
+To see all available network interfaces type command: 
 ```bash
 ip a
 ```
-to see all available interfaces.
 If eth0 not exist do this:
 
 [Change interface name](https://askubuntu.com/questions/767786/changing-network-interfaces-name-ubuntu-16-04)
