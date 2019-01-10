@@ -53,12 +53,13 @@ If eth0 not exist do this:
 [Change interface name](https://askubuntu.com/questions/767786/changing-network-interfaces-name-ubuntu-16-04)
 
 Edit your **/etc/default/grub** and change the line from
-
-**GRUB_CMDLINE_LINUX=""**
-
+```
+GRUB_CMDLINE_LINUX=""
+```
 to
-
-**GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"**
+```
+GRUB_CMDLINE_LINUX="net.ifnames=0 biosdevname=0"
+```
 
 and then update grub as root:
 ```bash
