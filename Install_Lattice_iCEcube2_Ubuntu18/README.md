@@ -71,7 +71,7 @@ and reboot your system
 To run programmer as normal user we have to add permissions.
 First we need to create file:
 ```bash
-sudo touch /etc/udev/rules.d/70-ftdi-for-user.rules 
+sudo touch /etc/udev/rules.d/99-ftdi-for-user.rules 
 ```
 with content:
 
