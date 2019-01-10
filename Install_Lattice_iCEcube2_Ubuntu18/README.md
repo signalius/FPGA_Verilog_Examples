@@ -75,7 +75,9 @@ sudo touch /etc/udev/rules.d/99-ftdi-for-user.rules
 ```
 with content:
 
+```
 SUBSYSTEM=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6010", MODE="0666", OWNER="1000"
+```
 
 Owner must be ID of user (can be checked using id command)
 
