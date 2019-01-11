@@ -1,3 +1,5 @@
+![logo](https://raw.githubusercontent.com/signalius/FPGA_Verilog_Examples/master/www/logo.png)
+
 # FPGA Verilog and SystemVerilog Examples
 
 
