@@ -1,24 +1,48 @@
+`timescale 1ns / 1ps
+
 module top(
     input CLK100MHZ,
     output [3:0] ja, // pmod JA, led segment 0 - 3
     output [2:0] jb  // pmod JB, led segment 4 - 7
     );
     
-    localparam N=32; 
+    // div for clock to increment next digit on led display, time = CLK/(2^N) so for N=27, time = 1,3 sec
+    localparam N=27; 
     
     logic [3:0]   hex; // hex digit which will be on led display 
     logic [N-1:0] cnt; // counter
 
-    // increment counter
-    always @ (posedge CLK100MHZ)
+    // counter for divide 100MHz clock to 1,3 seconds
+    counter #(.N(N)) sreg (
+    	.clk(CLK100MHZ),
+    	.qd(cnt) );
+
+    // increment hex variable with period 1,3 seconds
+    counter #(.N(4)) hexInc (
+    	.clk(cnt[N-1]),
+    	.qd(hex) );
+
+    // show hex number on display
+    led8seg ledL (.hex(hex), .seg( { jb[2:0], ja[3:0] } ));
+endmodule
+
+// simple counter
+module counter
+	#(parameter N=8)
+    ( 
+    input clk, 
+    output [N-1:0] qd
+    ); 
+
+    reg [N-1:0] cnt=0;
+
+    always @ (posedge clk)
     begin
         cnt <= cnt + 1;
     end 
 
-    assign hex = cnt[N-1:N-5]; // take 4 MSB
+    assign qd = cnt;
 
-    // show hex number on display
-    led8seg ledL (.hex(hex), .seg( { jb[2:0], ja[3:0] } ));
 endmodule
 
 //  ---A0--
