@@ -1,5 +1,3 @@
-`timescale 1ns / 1ps
-
 module top(
     input CLK100MHZ,
     output [3:0] ja, // pmod JA, led segment 0 - 3
