@@ -2,6 +2,6 @@
 
 Example hardware: Digilent ArtyA7/ArtyS7/ArtyZ7 with PmodSSD
 
-[![Schematic](https://raw.githubusercontent.com/signalius/FPGA_Verilog_Examples/master/Example_7seg_led_display/schematic.png)]
+[Schematic](https://raw.githubusercontent.com/signalius/FPGA_Verilog_Examples/master/Example_7seg_led_display/schematic.png)
   
-[![Photo from Arty S7](https://raw.githubusercontent.com/signalius/FPGA_Verilog_Examples/master/Example_7seg_led_display/photo.jpeg)]
+[Photo from Arty S7](https://raw.githubusercontent.com/signalius/FPGA_Verilog_Examples/master/Example_7seg_led_display/photo.jpeg)
