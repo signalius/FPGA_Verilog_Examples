@@ -1,12 +1,12 @@
 ![logo](https://raw.githubusercontent.com/signalius/FPGA_Verilog_Examples/master/www/logo.png)
 
 ## Most important Verilog guidelines
-* Guideline #1: When modeling **sequential** logic **use nonblocking** assignments. 
-* Guideline #2: When modeling **latches use nonblocking** assignments
-* Guideline #3: When modeling **combinational** logic with an always block, **use blocking** assignments
-* Guideline #4: When modeling both sequential and combinational logic within the same always block, **use nonblocking** assignments
-* Guideline #5: Do not mix blocking and nonblocking assignments in the same always block
-* Guideline #6: Do not make assignments to the same variable from more than one always block
+* When modeling **sequential** logic **use nonblocking** assignments. 
+* When modeling **latches use nonblocking** assignments
+* When modeling **combinational** logic with an always block, **use blocking** assignments
+* When modeling both sequential and combinational logic within the same always block, **use nonblocking** assignments
+* Do not mix blocking and nonblocking assignments in the same always block
+* Do not make assignments to the same variable from more than one always block
 
 [source](http://www.sunburst-design.com/papers/CummingsSNUG2000SJ_NBA.pdf)
 
