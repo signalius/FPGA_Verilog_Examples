@@ -8,7 +8,7 @@
 * Guideline #5: Do not mix blocking and nonblocking assignments in the same always block
 * Guideline #6: Do not make assignments to the same variable from more than one always block
 
-![source](http://www.sunburst-design.com/papers/CummingsSNUG2000SJ_NBA.pdf)
+[source](http://www.sunburst-design.com/papers/CummingsSNUG2000SJ_NBA.pdf)
 
 What is combinational logic?
 ```
