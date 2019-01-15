@@ -13,7 +13,7 @@ module top(
     // increment counter
     always @ (posedge CLK100MHZ)
     begin
-        cnt = cnt + 1;
+        cnt <= cnt + 1;
     end 
 
     assign hex = cnt[N-1:N-8]; // from counter we take number to display
@@ -33,11 +33,11 @@ module PmodSSD(
     logic [3:0] hexVal; // value to show on left-right display
     always @(posedge clk)
     begin
-        dispNum = ~dispNum;
+        dispNum <= ~dispNum;
         if(dispNum == 1) 
-           hexVal = hex[7:4];
+           hexVal <= hex[3:0];
         else
-           hexVal = hex[3:0];
+           hexVal <= hex[7:4];
     end
 
     logic [6:0] segVal;
